@@ -24,9 +24,7 @@ app.get("/", (req, res) => {
 @send send the response.
 */
 app.get("/greeting/:name", (req, res) => {
-    if (req.params.name) {
         res.send("What's up, " + req.params.name + " It's so great to see you!");
-    };
 });
 
 /*Gets the "/tip/total/tipPercentage" route
