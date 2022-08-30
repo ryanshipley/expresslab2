@@ -9,7 +9,6 @@
   "version": "1.0.0",
   "description": "Express lab 2",
   "main": "server.js",
-  "devDependencies": {},
   "author": "Ryan Shipley",
   "license": "ISC"
 }
