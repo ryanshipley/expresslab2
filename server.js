@@ -8,7 +8,8 @@ const randomResponse = eightBall[Math.floor(Math.random() * eightBall.length)];
 
 
 app.get("/", (req, res) => {
-    res.send("Hello World!");
+    res.send(`<h1>99 bottles on the wall</h1>
+    <a href="/98">Take one down and Pass it around</a>`);
 });
 
 app.get("/greeting/:name?", (req, res) => {
@@ -25,5 +26,15 @@ app.get("/magic/:question", (req, res) => {
     res.send(`
     <h1>${randomResponse}</h1>`)
 });
+
+app.get("/:number_of_bottles", (req, res)=>{
+    let numBottles = req.params.number_of_bottles;
+    if(numBottles > 0){
+        res.send(`<h1>${numBottles} bottles on the wall</h1>
+        <a href ="/${numBottles -1}">Take one down, pass it around!!</a>`)
+    }else{
+        res.send(`<h1>Restart</h1><a href="/">restart</a>`)
+    }
+})
 
 app.listen(3000);
