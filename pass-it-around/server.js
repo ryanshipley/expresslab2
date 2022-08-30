@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 /*Gets the "/99" route.
-@param req teh request
+@param req the request
 @res the response
 @send send the response.
 */
